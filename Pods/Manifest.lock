@@ -1,0 +1,15 @@
+PODS:
+  - EZSwiftExtensions (1.9)
+  - ObjectMapper (2.2.6)
+
+DEPENDENCIES:
+  - EZSwiftExtensions
+  - ObjectMapper
+
+SPEC CHECKSUMS:
+  EZSwiftExtensions: ce22bf6fc5c6e7c883fec413300b006e123735d0
+  ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
+
+PODFILE CHECKSUM: 605c41a5e22dfb43d76957a593b3bf7effe9dc1d
+
+COCOAPODS: 1.2.1
