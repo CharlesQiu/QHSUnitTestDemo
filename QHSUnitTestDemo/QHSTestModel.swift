@@ -11,7 +11,7 @@ import ObjectMapper
 class QHSTestModel: Mappable {
 
     var longitude: String = "0.0"
-    var lantitude: String = "0.0"
+//    var lantitude: String = "0.0"
     
     required init?(map: Map) {
         
@@ -19,6 +19,6 @@ class QHSTestModel: Mappable {
     
     func mapping(map: Map) {
         longitude <- map[["longitude0", "longitude1"]]
-        lantitude <- map[["lantitude0", "lantitude1"]]
+//        lantitude <- map[["lantitude0", "lantitude1"]]
     }
 }

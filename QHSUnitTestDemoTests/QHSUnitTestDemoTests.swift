@@ -26,26 +26,26 @@ class QHSUnitTestDemoTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
-        let JSON1: [String: Any] = ["longitude1": "2.22"]
+        let JSON1: [String: Any] = ["longitude0": "2.22"]
+        print("--- json1: \(JSON1) ---")
         let model1: QHSTestModel = Mapper<QHSTestModel>().map(JSON: JSON1)!
         XCTAssertTrue(model1.longitude == "2.22", model1.longitude)
-//        XCTAssertTrue(model1.longitude == "2.22")
-//        XCTAssertTrue(model1.longitude != "0.0")
-//        XCTAssertTrue(model1.longitude != "")
+        
         let JSON2: [String: Any] = ["longitude0": "", "longitude1": "2.22"]
+        print("\n--- json2: \(JSON2) ---")
         let model2: QHSTestModel = Mapper<QHSTestModel>().map(JSON: JSON2)!
         XCTAssertTrue(model2.longitude == "2.22", model2.longitude)
-//        XCTAssertTrue(model2.longitude == "0.0")
-//        XCTAssertTrue(model2.longitude == "")
-        let JSON3: [String: Any] = ["longitude0": "2.22"]
+
+        let JSON3: [String: Any] = ["longitude1": ""]
+        print("\n--- json3: \(JSON3) ---")
         let model3: QHSTestModel = Mapper<QHSTestModel>().map(JSON: JSON3)!
-        XCTAssertTrue(model3.longitude == "2.22", model3.longitude)
-//        XCTAssertTrue(model3.longitude == "0.0")
-//        XCTAssertTrue(model3.longitude == "")
+        XCTAssertTrue(model3.longitude == "0.0", model3.longitude)
         
         let JSON4: [String: Any] = ["longitude0": "", "longitude1": ""]
+        print("\n--- json4: \(JSON4) ---")
         let model4: QHSTestModel = Mapper<QHSTestModel>().map(JSON: JSON4)!
         XCTAssertTrue(model4.longitude == "0.0", model4.longitude)
+
 
     }
     
